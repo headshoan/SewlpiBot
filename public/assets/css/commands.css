@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0e0e13;
+  color: white;
+  overflow-x: hidden;
+}
+
+.bg-blur {
+  position: fixed;
+  top: -20%; left: -20%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at center, #1e90ff33, transparent 70%);
+  filter: blur(100px);
+  z-index: -1;
+  animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+.cmd-header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1c1f26;
+}
+
+.create-btn {
+  background: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.create-btn:hover {
+  background: #3e8e41;
+}
+
+.cmd-list {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.cmd-card {
+  background: #2a2d33;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.cmd-card h3 {
+  margin: 0 0 5px;
+}
+.cmd-card .desc {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+.cmd-card .toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.toggle input {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background: #555;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.toggle input:checked {
+  background: #00c853;
+}
+.toggle input::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.2s;
+}
+.toggle input:checked::before {
+  transform: translateX(20px);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.modal.hidden {
+  display: none;
+}
+.modal-content {
+  background: #20232a;
+  padding: 30px;
+  border-radius: 15px;
+  width: 400px;
+  color: white;
+}
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 15px;
+  background: #2d2f36;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+.modal-content button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background: #2196f3;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.modal-content .close {
+  background: #f44336;
+}
+
+#notify {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #00c853;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00000077;
+  display: none;
+}
+#notify.show {
+  display: block;
+  animation: fadeout 3s ease forwards;
+}
+
+@keyframes fadeout {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}

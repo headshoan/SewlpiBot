@@ -1,0 +1,153 @@
+/* Grundstyles */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0e1013;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  max-width: 480px;
+  margin: 80px auto;
+  padding: 20px 30px;
+  background: #1f2025;
+  border-radius: 20px;
+  box-shadow: 0 0 40px #0008;
+  text-align: center;
+}
+
+h1 {
+  color: #61dafb;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.input-box {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.input-box input {
+  background-color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #eee;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.input-box input:focus {
+  background-color: #2a2d36;
+  outline: 2px solid #61dafb;
+}
+
+button.btn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  user-select: none;
+  width: 100%;
+}
+
+button.btn:hover {
+  background-color: #3e8e41;
+}
+
+button.btn:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+/* Cookie Banner */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #eee;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #0009;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 9999;
+  max-width: 480px;
+  font-size: 1rem;
+}
+
+.cookie-banner p {
+  flex: 1;
+  margin: 0;
+}
+
+.cookie-buttons button {
+  background: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.cookie-buttons button#declineCookies {
+  background: #f44336;
+}
+
+.cookie-buttons button:hover {
+  filter: brightness(0.9);
+}
+
+/* Notification */
+
+#notify {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #00c853;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  user-select: none;
+  box-shadow: 0 0 15px #0008;
+  display: none;
+  z-index: 9999;
+}
+
+#notify.show {
+  display: block;
+  animation: fadeout 3s ease forwards;
+}
+
+@keyframes fadeout {
+  0%, 80% { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}

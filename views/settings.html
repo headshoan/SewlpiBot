@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Settings – BotDashboard</title>
+  <link rel="stylesheet" href="../public/assets/css/settings.css" />
+</head>
+<body>
+  <header class="settings-header">
+    <h1>⚙️ Einstellungen</h1>
+  </header>
+
+  <main class="settings-main">
+    <section class="setting-group">
+      <h2>Sprache / Language</h2>
+      <select id="languageSelect">
+        <option value="de">Deutsch (DE)</option>
+        <option value="en">English (EN)</option>
+        <option value="ru">Русский (RU)</option>
+      </select>
+    </section>
+
+    <section class="setting-group">
+      <h2>Bot-Neustart</h2>
+      <button id="restartBtn">Bot neu starten</button>
+      <p id="restartStatus" class="status-msg"></p>
+    </section>
+
+    <section class="setting-group">
+      <h2>Benachrichtigungen</h2>
+      <label>
+        <input type="checkbox" id="notifyToggle" checked />
+        Benachrichtigungen aktivieren
+      </label>
+    </section>
+  </main>
+
+  <script src="../public/assets/js/settings.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login/Register – BotDashboard</title>
+  <link rel="stylesheet" href="../public/assets/css/login.css" />
+</head>
+<body>
+  <div class="bg-container"></div>
+
+  <div class="form-wrapper">
+    <div class="tab-switch">
+      <button id="login-tab" class="active">Login</button>
+      <button id="register-tab">Register</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form id="login-form" class="form active">
+      <h1>Login</h1>
+      <div class="input-box">
+        <label>Email</label>
+        <input type="email" placeholder="you@email.com" required />
+      </div>
+      <div class="input-box">
+        <label>Password</label>
+        <input type="password" placeholder="••••••••" required />
+      </div>
+      <button type="submit" class="btn">Login with Discord</button>
+    </form>
+
+    <!-- REGISTER FORM -->
+    <form id="register-form" class="form">
+      <h1>Register</h1>
+      <div class="input-box">
+        <label>Username</label>
+        <input type="text" placeholder="yourusername" required />
+      </div>
+      <div class="input-box">
+        <label>Email</label>
+        <input type="email" placeholder="you@email.com" required />
+      </div>
+      <div class="input-box">
+        <label>Password</label>
+        <input type="password" placeholder="••••••••" required />
+      </div>
+      <button type="submit" class="btn">Create Account</button>
+    </form>
+  </div>
+
+  <script src="../public/assets/js/login.js"></script>
+</body>
+</html>

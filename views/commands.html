@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command Manager</title>
+  <link rel="stylesheet" href="../public/assets/css/commands.css" />
+</head>
+<body>
+  <div class="bg-blur"></div>
+
+  <header class="cmd-header">
+    <h1>🧠 Custom Slash Commands</h1>
+    <button class="create-btn" id="openModal">➕ Neuer Befehl</button>
+  </header>
+
+  <section class="cmd-section">
+    <div class="cmd-list" id="commandList">
+      <!-- Befehle werden hier dynamisch geladen -->
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal hidden" id="commandModal">
+    <div class="modal-content">
+      <h2>🔧 Befehl erstellen</h2>
+      <label>Name:</label>
+      <input type="text" id="cmd-name" placeholder="/meinbefehl" />
+      <label>Beschreibung:</label>
+      <input type="text" id="cmd-description" placeholder="Was macht dieser Befehl?" />
+      <label>Antwort:</label>
+      <textarea id="cmd-response" placeholder="Antwort des Bots..."></textarea>
+      <button id="saveCommand">✅ Speichern</button>
+      <button class="close" id="closeModal">❌</button>
+    </div>
+  </div>
+
+  <!-- NOTIFY -->
+  <div id="notify" class="hidden">Gespeichert ✅</div>
+
+  <script src="../public/assets/js/commands.js"></script>
+</body>
+</html>

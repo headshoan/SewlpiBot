@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Channel Manager</title>
+  <link rel="stylesheet" href="../public/assets/css/channels.css" />
+</head>
+<body>
+  <header class="channels-header">
+    <h1>📡 Server Channels</h1>
+    <button id="refreshBtn" class="refresh">🔄 Channels aktualisieren</button>
+  </header>
+
+  <section class="channel-filter">
+    <label>Filter:</label>
+    <select id="filter">
+      <option value="all">Alle</option>
+      <option value="text">Text-Channels</option>
+      <option value="voice">Voice-Channels</option>
+      <option value="category">Kategorien</option>
+    </select>
+  </section>
+
+  <main class="channel-list" id="channelList">
+    <!-- Channels kommen hier rein -->
+  </main>
+
+  <script src="../public/assets/js/channels.js"></script>
+</body>
+</html>

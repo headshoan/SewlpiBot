@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0d0f13;
+  color: white;
+}
+
+.channels-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background: #1a1d24;
+  align-items: center;
+}
+
+.refresh {
+  background: #2196f3;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.refresh:hover {
+  background: #1976d2;
+}
+
+.channel-filter {
+  padding: 20px 30px;
+  background: #15171d;
+}
+
+.channel-filter select {
+  background: #1f2128;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+.channel-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.channel-card {
+  background: #23262e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #00000040;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.channel-card .left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.channel-card .left i {
+  font-size: 1.5rem;
+}
+
+.channel-card .right input {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bot Dashboard</title>
+  <link rel="stylesheet" href="../public/assets/css/dashboard.css" />
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>📊 Bot Overview</h1>
+    <div class="stats">
+      <div class="card">
+        <h2 id="server-count">0</h2>
+        <p>Active Servers</p>
+      </div>
+      <div class="card warning">
+        <h2 id="issues-count">0</h2>
+        <p>Connection Issues</p>
+      </div>
+      <div class="card maintenance">
+        <h2 id="maintenance-count">0</h2>
+        <p>Under Maintenance</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h2>🖥️ Server Status</h2>
+    <table class="status-table">
+      <thead>
+        <tr>
+          <th>Server</th>
+          <th>Status</th>
+          <th>Latency</th>
+          <th>Last Message</th>
+        </tr>
+      </thead>
+      <tbody id="server-table-body">
+        <!-- Dynamisch gefüllt mit JS -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="../public/assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.settings-header {
+  padding: 20px 30px;
+  background: #1f1f1f;
+  box-shadow: 0 2px 5px #00000088;
+  text-align: center;
+}
+
+.settings-main {
+  flex: 1;
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.setting-group {
+  margin-bottom: 30px;
+}
+
+.setting-group h2 {
+  margin-bottom: 12px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 6px;
+}
+
+select, button {
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+select {
+  width: 100%;
+  background: #222;
+  color: white;
+}
+
+button {
+  background: #3a86ff;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #265dcc;
+}
+
+.status-msg {
+  margin-top: 10px;
+  font-style: italic;
+  color: #7aff9e;
+}
