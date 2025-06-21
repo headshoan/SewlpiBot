@@ -3,28 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Discord Bot Dashboard</title>
+  <title>SewlpiBot – Dashboard</title>
   <link rel="stylesheet" href="../style/style.css" />
 </head>
 <body>
   <main>
-    <h1>Willkommen zum Discord Bot Dashboard</h1>
+    <h1>Willkommen bei <span style="color:#61dafb">SewlpiBot</span></h1>
 
     <div id="userArea" style="display:none;">
       <p>Du bist eingeloggt! 🎉</p>
-      <button id="logoutBtn">Logout</button>
+      <button id="logoutBtn" class="btn">Logout</button>
     </div>
 
     <div id="loginArea">
       <form id="loginForm">
-        <h2>Login</h2>
+        <h2>Login mit Discord</h2>
         <div class="input-box">
           <label for="username">Benutzername</label>
-          <input type="text" id="username" name="username" placeholder="Dein Discord-Name" required />
+          <input type="text" id="username" name="username" placeholder="Discord#0000" required />
         </div>
         <div class="input-box">
           <label for="password">Passwort</label>
-          <input type="password" id="password" name="password" placeholder="Passwort" required />
+          <input type="password" id="password" name="password" placeholder="••••••••" required />
         </div>
         <button type="submit" class="btn">Einloggen</button>
       </form>
@@ -40,8 +40,18 @@
     </div>
   </div>
 
+  <!-- Notification -->
   <div id="notify"></div>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      <strong>SewlpiBot</strong> — This site is open source.
+      <a href="https://github.com/your-username/your-repo" target="_blank">Improve this page</a>.
+    </p>
+  </footer>
+
+  <!-- JS -->
   <script src="../js/script.js" defer></script>
 </body>
 </html>
