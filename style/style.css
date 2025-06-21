@@ -1,129 +1,186 @@
-/* =============== Global =============== */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0e1013;
-  color: #eee;
+/* === Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+/* === Reset & Basics === */
+* {
   margin: 0;
   padding: 0;
-  line-height: 1.5;
+  box-sizing: border-box;
 }
 
-main {
-  max-width: 480px;
-  margin: 80px auto;
-  padding: 30px;
-  background: #1f2025;
-  border-radius: 20px;
-  box-shadow: 0 0 40px #0008;
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* === Container === */
+.container {
+  width: 360px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  position: relative;
+  user-select: none;
+}
+
+/* === Tabs === */
+.form-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.form-toggle button {
+  background: transparent;
+  border: none;
+  padding: 10px 35px;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.form-toggle button.active {
+  opacity: 1;
+  border-bottom: 2px solid #61dafb;
+}
+
+/* === Forms === */
+.form {
+  display: none;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form.active {
+  display: flex;
+}
+
+.form h2 {
   text-align: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: #fff;
 }
 
-h1 {
-  color: #61dafb;
-  margin-bottom: 30px;
-}
-
-h2 {
-  margin-bottom: 20px;
-  color: #ddd;
-}
-
-/* =============== Input & Form =============== */
-.input-box {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.input-box label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.input-box input {
-  background-color: #222;
+/* === Inputs === */
+.form input {
+  padding: 14px 18px;
+  border-radius: 10px;
   border: none;
-  border-radius: 8px;
-  padding: 10px 14px;
+  background: rgba(255,255,255,0.15);
   color: #eee;
-  width: 100%;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
-.input-box input:focus {
-  background-color: #2a2d36;
-  outline: 2px solid #61dafb;
+.form input::placeholder {
+  color: #ddd;
+  font-weight: 300;
 }
 
-/* =============== Button =============== */
-button.btn,
-.cookie-buttons button {
-  background-color: #4caf50;
+.form input:focus {
+  outline: none;
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 0 8px 2px #61dafb;
+}
+
+/* === Discord Button === */
+.discord-btn {
+  padding: 14px 0;
   border: none;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 8px;
+  border-radius: 12px;
+  background-color: #7289da;
+  color: #fff;
   font-weight: 600;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.25s ease;
+  box-shadow: 0 4px 12px rgba(114, 137, 218, 0.5);
   user-select: none;
-  width: 100%;
-  margin-top: 10px;
 }
 
-button.btn:hover,
-.cookie-buttons button:hover {
-  background-color: #3e8e41;
+.discord-btn:hover {
+  background-color: #5b6eae;
+  box-shadow: 0 6px 20px rgba(91, 110, 174, 0.7);
 }
 
-button.btn:disabled {
-  background-color: #666;
-  cursor: not-allowed;
-}
-
-/* =============== Cookie Banner =============== */
+/* === Cookie Banner === */
 .cookie-banner {
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: #222;
+  background: rgba(0,0,0,0.8);
   color: #eee;
-  padding: 16px 24px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px #0009;
+  padding: 16px 28px;
+  border-radius: 14px;
+  box-shadow: 0 0 15px #000a;
   display: flex;
   align-items: center;
   gap: 20px;
-  z-index: 9999;
-  max-width: 480px;
+  max-width: 440px;
   font-size: 1rem;
+  z-index: 9999;
+  user-select: none;
 }
 
 .cookie-banner p {
   flex: 1;
-  margin: 0;
+}
+
+.cookie-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.cookie-buttons button#acceptCookies {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.cookie-buttons button#acceptCookies:hover {
+  background-color: #43a047;
 }
 
 .cookie-buttons button#declineCookies {
-  background: #f44336;
+  background-color: #f44336;
+  color: #fff;
 }
 
-/* =============== Notification (oben rechts) =============== */
+.cookie-buttons button#declineCookies:hover {
+  background-color: #d32f2f;
+}
+
+/* === Notification (oben rechts) === */
 #notify {
   position: fixed;
   top: 20px;
   right: 20px;
   background-color: #00c853;
   color: white;
-  padding: 12px 22px;
-  border-radius: 10px;
+  padding: 14px 26px;
+  border-radius: 14px;
   font-weight: 600;
-  user-select: none;
   box-shadow: 0 0 15px #0008;
   display: none;
   z-index: 9999;
+  user-select: none;
 }
 
 #notify.show {
@@ -136,23 +193,42 @@ button.btn:disabled {
   100% { opacity: 0; display: none; }
 }
 
-/* =============== Footer =============== */
+/* === Footer === */
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 24px 20px;
   font-size: 0.9rem;
   color: #aaa;
   background-color: #111;
   border-top: 1px solid #333;
-  margin-top: 60px;
+  margin-top: 50px;
+  user-select: none;
 }
 
 .footer a {
   color: #61dafb;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+/* === Responsive (kleine Bildschirme) === */
+@media (max-width: 400px) {
+  .container {
+    width: 90vw;
+    padding: 30px 20px;
+  }
+
+  .form-toggle button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  .form h2 {
+    font-size: 1.4rem;
+  }
 }
